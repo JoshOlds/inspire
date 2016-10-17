@@ -31,6 +31,9 @@ html, body {
     height: 100%;
     width: 100%;
 }
+.todo{
+    visibility: hidden;
+}
 
 .todo-text{
     color: white;
@@ -70,31 +73,60 @@ html, body {
 .greeting{
     color: white;
     font-size: 18px;
+    font-size: 8vw;
     font-weight: bold;
     margin-top: -30px;
+    -webkit-text-stroke: 1px black;
 }
 .clock{
     font-size: 96px;
+    font-size: 24vw;
     font-weight: bold;
     text-align: center;
     color: white;
+    -webkit-text-stroke: 1px black;
 }
+
 .clock:hover{
     cursor: pointer;
 }
 .date{
     font-size: 24px;
+    font-size: 8vw;
     font-weight: bold;
     text-align: center;
     color: white;
+    -webkit-text-stroke: 1px black;
 }
 
 .quote{
     color: white;
-    font-size: 24px;
+    font-size: 12px;
+    max-height: 30%;
+    overflow: hidden;
 }
 
 .author{
     color: white;
 }
+
+@media only screen and (min-width: 64.063em) { 
+    .clock{ 
+        font-size: 8vw;
+    }
+    .date{
+        font-size: 3vw;
+    }
+    .greeting{
+        font-size: 3vw;
+    }
+    .todo{
+        visibility: visible;
+    }
+    .quote{
+        font-size: 24px;
+    }
+}
+
+
 
