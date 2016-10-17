@@ -1,5 +1,16 @@
+.full-width {
+   width: 100% !important;
+   margin-left: auto !important;
+   margin-right: auto !important;
+   max-width: initial !important;
+}
+
+.text-center{
+    text-align: center;
+}
+
 body {
-  background: url("") no-repeat center center fixed; 
+  background: black; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -12,9 +23,36 @@ html, body {
     height: 100%;
 }
 
+.top{
+    height: 10%;
+}
+
 .full-page{
     height: 100%;
     width: 100%;
+}
+
+.todo-text{
+    color: white;
+    background: transparent;
+    border: 0px;
+    border-bottom: 1px solid rgba(255, 255, 255, 128);
+}
+.todo-text:focus{
+    color: white;
+    background: transparent;
+    border: 0px;
+    border-bottom: 1px solid rgba(255, 255, 255, 128);
+}
+.todo-list{
+    color: white;
+    font-size: 18px;
+}
+.todo-delete{
+    color: red;
+}
+.todo-delete:hover{
+    cursor: pointer;
 }
 .weather{
     color: white;
@@ -22,15 +60,27 @@ html, body {
     text-align: right;
     margin: 0px auto;
 }
+.weather:hover{
+    cursor: pointer;
+}
 .scooted-up{
     margin-top: -15px;
 }
 
+.greeting{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: -30px;
+}
 .clock{
     font-size: 96px;
     font-weight: bold;
     text-align: center;
     color: white;
+}
+.clock:hover{
+    cursor: pointer;
 }
 .date{
     font-size: 24px;
@@ -38,3 +88,13 @@ html, body {
     text-align: center;
     color: white;
 }
+
+.quote{
+    color: white;
+    font-size: 24px;
+}
+
+.author{
+    color: white;
+}
+

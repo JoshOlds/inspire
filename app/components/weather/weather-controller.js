@@ -3,18 +3,19 @@
 	var wc = this;
 	var weatherService = new WeatherService();
 	var displayC = false;
-	
-	weatherService.getWeather(function(weather){
-		displayWeather(weather);
-	})
+	var weather;
+	weatherService.getWeather(displayWeather)
 	
 	function displayWeather(weatherObj){
+		weather = weatherObj;
+		console.log(weather)
 		var template = ``;
 		var weatherElem = $('#weather')
-		var iconUrl = weatherService.getWeatherIcon(weatherObj.weather[0].icon);
-		var tempF = weatherService.kelvinToFahrenheit(weatherObj.main.temp)
-		var tempC = weatherService.kelvinToCelsius(weatherObj.main.temp)
+		var iconUrl = weatherService.getWeatherIcon(weather.weather[0].icon);
+		var tempF = weatherService.kelvinToFahrenheit(weather.main.temp)
+		var tempC = weatherService.kelvinToCelsius(weather.main.temp)
 		var temp;
+		var unit = displayC ? "C" : "F";
 		if(displayC){
 		 	temp = Math.round(tempC);
 		}else{
@@ -24,14 +25,17 @@
 		template += 
 		`
 		<img src="${iconUrl}">
-		${temp}&#176;
-		<p class="scooted-up">${weatherObj.name}</p>
+		${temp}&#176${unit}
+		<p class="scooted-up">${weather.name}</p>
 		`
 
 		weatherElem.html(template);
 	}
 	
-	
+	$('#weather').on('click', function(){
+		displayC = !displayC;
+		displayWeather(weather);
+	})
 	
 	
 }())

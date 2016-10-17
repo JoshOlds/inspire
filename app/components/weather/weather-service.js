@@ -5,17 +5,10 @@ function WeatherService() {
 	var apiWeatherIconUrl = 'http://openweathermap.org/img/w/'
 
 	this.getWeather = function (callWhenDone) {
-		var w = localStorage.getItem('weather');
-		if (w) {
-			w = JSON.parse(w);
-			w = JSON.parse(w);
-			if(DebugFlag){console.log(w)}
-			return callWhenDone(w)
-		}
 
 		$.get(apiUrl, function (res) {
-			localStorage.setItem('weather', JSON.stringify(res))
-			callWhenDone(res);
+			var obj = JSON.parse(res)
+			callWhenDone(obj);
 		})
 	}
 
@@ -30,4 +23,6 @@ function WeatherService() {
 	this.kelvinToFahrenheit = function(temp){
 		return (temp * (9/5) - 459.67);
 	}
+
+	
 }
