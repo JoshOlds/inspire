@@ -8,35 +8,33 @@
 
 	<body id="body">
 
-		<div class="row">
+		<div class="row full-page">
+
 			<div class="column small-6">
 				<p>Something here!</p>
 			</div>
 			<div class="column small-6 weather" id='weather'>
 				<p>Weather here!</p>
 			</div>
-		</div>
 
-		<div class="my-align-middle">
-			<div class="row align-middle align-center">
-				<div class="column small-12 clock">
+
+			<div class="column small-12 align-self-middle">
+				<div class="clock" id="clock">
 					<h1>TEST!!!</h1>
 				</div>
+				<div class="date scooted-up" id="date">
+					<h1>Date!!!</h1>
+				</div>
 			</div>
-		</div>
 
 
+			<div id="todo">
+
+			</div>
 
 
-
-
-		<div id="todo">
-
-		</div>
-
-		<div class="row align-bottom">
-			<div class="column small-12 quote" id="quote">
-
+			<div class="column small-12 align-self-bottom quote" id="quote">
+				<p>Imma Quote!</p>
 			</div>
 		</div>
 
@@ -56,6 +54,8 @@
 		<script src="app/components/image/image-controller.js"></script>
 		<script src="app/components/quote/quote-controller.js"></script>
 		<script src="app/components/todo/todo-controller.js"></script>
+
+		<script src="app/components/time/time-controller.js"></script>
 
 	</body>
 

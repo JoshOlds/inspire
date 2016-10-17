@@ -12,7 +12,10 @@ html, body {
     height: 100%;
 }
 
-
+.full-page{
+    height: 100%;
+    width: 100%;
+}
 .weather{
     color: white;
     font-size: 24px;
@@ -23,9 +26,15 @@ html, body {
     margin-top: -15px;
 }
 
-.my-align-middle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+.clock{
+    font-size: 96px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+.date{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
 }
