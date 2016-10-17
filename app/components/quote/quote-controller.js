@@ -1,0 +1,5 @@
+(function(){
+	
+	//Get your QuoteService
+	
+}())
